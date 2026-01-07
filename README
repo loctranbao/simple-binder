@@ -1,0 +1,24 @@
+simple binder is a minimalistic implementation of Android binder kernel module
+Only basic feature of binder are implemented
+
+Basic Architect
+
+simple_binder.c
+	kernel module facilitate binder transaction between binder client-service
+
+service_manager.cpp
+	binder context manager used to store all binder server register
+
+binder_server.c
+	example of a binder server registered as name "echo"
+
+binder_client.c
+	example of binder client connect to binder_server and execute IPC method
+
+
+Usage
+	1.run ./make
+	2.open new shell and install simple_binder kernel module "sudo insmod simple_binder.ko"
+	3.open another shell and run service_manager "sudo ./service_manager"
+	4.open another shell and run binder_server "sudo ./binder_server"
+	5.open another shell and run binder_client "sudo ./binder_client"
