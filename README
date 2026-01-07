@@ -17,7 +17,7 @@ binder_client.c
 
 
 Usage
-	1.run ./make
+	1.make
 	2.open new shell and install simple_binder kernel module "sudo insmod simple_binder.ko"
 	3.open another shell and run service_manager "sudo ./service_manager"
 	4.open another shell and run binder_server "sudo ./binder_server"
